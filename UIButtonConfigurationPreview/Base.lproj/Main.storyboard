@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIButtonConfigurationPreview" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9J6-J3-jRe">
+                                <rect key="frame" x="8" y="52" width="398" height="802"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iwt-ME-4Td">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="60.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Style Selector" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ff-zu-6uC">
+                                                <rect key="frame" x="146" y="0.0" width="106" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" wraps="YES" maximumValue="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Wq-sc-oaQ">
+                                                <rect key="frame" x="152" y="28.5" width="94" height="32"/>
+                                                <connections>
+                                                    <action selector="updateStyle:" destination="BYZ-38-t0r" eventType="valueChanged" id="hWN-hP-dD1"/>
+                                                </connections>
+                                            </stepper>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4gF-na-ePt" firstAttribute="top" secondItem="iwt-ME-4Td" secondAttribute="top" id="3W4-Lx-vUk"/>
+                                    <constraint firstItem="iwt-ME-4Td" firstAttribute="leading" secondItem="4gF-na-ePt" secondAttribute="leading" id="3YO-Vu-f8V"/>
+                                    <constraint firstItem="iwt-ME-4Td" firstAttribute="trailing" secondItem="4gF-na-ePt" secondAttribute="trailing" id="K2v-uQ-1vJ"/>
+                                    <constraint firstItem="iwt-ME-4Td" firstAttribute="width" secondItem="9J6-J3-jRe" secondAttribute="width" id="S1x-41-99n"/>
+                                    <constraint firstItem="iwt-ME-4Td" firstAttribute="bottom" secondItem="4gF-na-ePt" secondAttribute="bottom" id="dtA-vw-VUh"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="4gF-na-ePt"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="EaE-aa-opb"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9J6-J3-jRe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="GTF-4n-PbN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9J6-J3-jRe" secondAttribute="bottom" constant="8" id="JWS-E0-lep"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9J6-J3-jRe" secondAttribute="trailing" constant="8" id="MuZ-cz-z2Z"/>
+                            <constraint firstItem="9J6-J3-jRe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="c5Q-dl-k9I"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="stackView" destination="iwt-ME-4Td" id="mtL-gu-5KC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="121"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
